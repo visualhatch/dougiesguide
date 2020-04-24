@@ -1,0 +1,81 @@
+.ui.menu {
+    margin: 0 !important;
+    padding-left: 26px !important;
+    padding-right: 26px !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #7100E3;
+}
+
+
+.navImage {
+    width: 100px !important;
+}
+
+.navLogo.active {
+    background: none !important;
+}
+
+.item {
+    color: white !important;
+    font-family: "Roboto", sans-serif !important;
+}
+
+.item:before {
+    width: 0 !important;
+}
+
+.navLink.active {
+    background: rgba(0,0,0,0.1) !important;
+}
+
+.dropdownMenu {
+    margin-right: -15px !important;
+}
+
+.navToggler {
+    font-size: 20px;
+}
+
+
+
+/*SIDEBAR CSS*/
+.sidebar.menu {
+    background-color: #7100E3 !important;
+    margin-top: 52px !important;
+}
+
+.pusherIconSpacer {
+    margin-left: 10px !important;
+}
+
+.sidebarUsername {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    padding-right: 0 !important;
+    margin-bottom: 8px !important;
+}
+
+.sidebarIcon {
+    margin-right: 14px !important;
+}
+
+
+/*MEDIA QUERIES*/
+
+/*MOBILE*/
+@media only screen and (max-width: 600px) {
+    .ui.menu {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+}
+
+/*TABLET*/
+@media only screen and (max-width: 768px) {
+    .ui.menu {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+}
