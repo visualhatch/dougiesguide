@@ -25,7 +25,7 @@ class DiveAndDiningListItem extends Component {
         </Segment>
         <Segment secondary>
           <List horizontal>
-            {listing.userFavourites.map(userFavourite => (
+            {listing.userFavourites && listing.userFavourites.map(userFavourite => (
               <DiveAndDiningListPhotos key={userFavourite.id} userFavourite={userFavourite} />
             ))}
           </List>

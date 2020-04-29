@@ -3,6 +3,8 @@ import { Button, Grid } from "semantic-ui-react";
 import DiveAndDiningList from "../DiveAndDiningList/DiveAndDiningList";
 import DiveAndDiningForm from "../DiveAndDiningForm/DiveAndDiningForm";
 
+import cuid from 'cuid';
+
 // DUMMY DATA
 const listingsFromDashboard = [
   {
@@ -108,6 +110,18 @@ class DiveAndDiningDashboard extends Component {
     }));
   };
 
+  handleCreateListing = (newListing) => {
+    newListing.id = cuid();
+    newListing.photoURL = 'https://picsum.photos/id/1011/200'
+    this.setState(({listings}) => ({
+      listings: [...listings, newListing],
+      isOpen: false
+    }))
+  }
+
+
+
+
   render() {
     const { listings, isOpen } = this.state;
     return (
@@ -122,7 +136,7 @@ class DiveAndDiningDashboard extends Component {
             onClick={this.handleIsOpenToggle}
           />
 
-          {isOpen && <DiveAndDiningForm cancelFormOpen={this.handleIsOpenToggle}/>}
+          {isOpen && <DiveAndDiningForm createListing={this.handleCreateListing} cancelFormOpen={this.handleIsOpenToggle}/>}
         </Grid.Column>
       </Grid>
     );
